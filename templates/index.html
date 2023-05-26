@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Prediction Diabete</title>
+	<h1 title="center">PREDICTION DE TEST DE DIABETE</h1>
+	<link rel="stylesheet" type="text/css" rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+
+</head>
+<body>
+	<div class="container" >
+		<div class="row">
+			<div class="col-lg-12">
+				<img src="{{url_for('static',filename='images/DD.JPG' )}}" alt="Photo glasse" style="width:100px; height:100px">
+					<div class="card col-lg-8 py-4">
+                        <div class="card-fluid">
+                            <form action="{{url_for('predict')}}" method="POST" id="contactForm">
+                                <div class="col-lg-8">
+                                    <div class="form-group">
+                                        <input type="text" name="Pregnancies" id="Pregnancies" class="form-control" placeholder="Pregnancies">
+	                                <div class="form-group">
+	                                    <input type="text" name="Glucose" id="Glucose" class="form-control" placeholder="Glucose">
+	                                </div>
+	                                <div class="form-group">
+	                                    <input type="text" name="BloodPressure	" id="BloodPressure	" class="form-control" placeholder="BloodPressure">
+	                                </div>
+	                                <div class="form-group">
+	                                    <input type="text" name="SkinThickness" id="SkinThickness" class="form-control" placeholder="SkinThickness">
+	                                </div>
+	                                <div class="form-group">
+	                                    <input type="text" name="Insulin" id="Insulin" class="form-control" placeholder="Insulin">
+	                                </div>
+	                                <div class="form-group">
+	                                    <input type="text" name="BMI" id="BMI" class="form-control" placeholder="BMI">
+	                                </div>
+	                                <div class="form-group">
+	                                    <input type="text" name="DiabetesPedigreeFunction" id="DiabetesPedigreeFunction" class="form-control" placeholder="DiabetesPedigreeFunction">
+	                                </div>
+	                                <div class="form-group">
+	                                    <input type="text" name="Age" id="Age" class="form-control" placeholder="Age">
+	                                </div>
+	                                <div>
+	                                    <h3>{{prediction_text_}}</h3>
+	                                </div>
+	                                    <button class="btn btn-common" id="submit" type="submit">Predire</button>
+	                                </div>
+                            </form>
+                        </div>
+                    </div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
